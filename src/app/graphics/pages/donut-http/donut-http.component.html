@@ -1,0 +1,21 @@
+<h1>RRSS mas usadas</h1>
+<hr>
+
+<div class="alert alert-info"
+     *ngIf="doughnutChartData.datasets[0].data.length === 0; else divGraphic">
+    Loading...
+</div>
+
+<ng-template #divGraphic>
+    <div class="row">
+        <div class="col-md-5">
+            <app-donut-graphic [doughnutChartData]="doughnutChartData"></app-donut-graphic>
+        </div>
+    </div>    
+</ng-template>
+
+
+<button class="btn btn-primary"
+        (click)="getUsersCount()">ver</button>
+
+        

@@ -1,0 +1,15 @@
+
+
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-left align-items-center"
+        *ngFor="let item of menu"
+        [routerLink]="[ item.route ]" 
+        routerLinkActive="active">
+        <div>
+            <img src="../../../assets/img/{{ item.img }}" class="m-2">
+                </div>
+        <div>
+            {{ item.text }}
+        </div>
+    </li>
+</ul>
